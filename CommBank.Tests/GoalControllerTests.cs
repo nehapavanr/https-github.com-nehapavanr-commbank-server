@@ -78,6 +78,7 @@ public class GoalControllerTests
         var result = await controller.GetForUser(users[0].Id!);
 
         // Assert
+        // The fake service returns all goals, so we check the controller passes them through
         Assert.NotNull(result);
         Assert.Equal(goals.Count, result!.Count);
 
